@@ -14,7 +14,6 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            /* Using your provided image link as the background */
             background: url('https://lh3.googleusercontent.com/d/1c9G_srPI5UdaAfNb8PP1QClVgeXPZFY9') no-repeat center center fixed;
             background-size: cover;
             display: flex;
@@ -25,7 +24,6 @@
             padding: 15px;
         }
 
-        /* Adding a semi-transparent blur effect so text stands out over the image */
         .card {
             background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(5px);
@@ -94,7 +92,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        /* TICKET OVERLAY */
         #ticketOverlay {
             display: none;
             position: fixed;
@@ -122,20 +119,14 @@
         }
 
         .ticket-header { background: var(--teal); color: white; padding: 20px; text-align: center; }
-        .ticket-body { padding: 25px; text-align: center; border-bottom: 2px dashed #ccc; position: relative; }
-        .ticket-body::before, .ticket-body::after {
-            content: ''; position: absolute; bottom: -12px; width: 24px; height: 24px;
-            background: rgba(0,0,0,0.9); border-radius: 50%;
-        }
-        .ticket-body::before { left: -12px; }
-        .ticket-body::after { right: -12px; }
-
-        .ticket-info { margin-bottom: 15px; }
-        .ticket-label { font-size: 0.7rem; color: #888; text-transform: uppercase; display: block; }
-        .ticket-value { font-size: 1.1rem; font-weight: 700; color: #333; }
-        .ticket-id { background: #f0f0f0; padding: 10px; display: inline-block; border-radius: 5px; font-family: monospace; font-weight: bold; margin-top: 10px; }
-        .ticket-footer { padding: 15px; text-align: center; font-size: 0.8rem; color: var(--deep-green); font-weight: bold; }
-        .close-btn { margin-top: 20px; background: var(--gold); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        .ticket-body { padding: 30px 25px; text-align: center; position: relative; }
+        
+        .ticket-info { margin-bottom: 20px; }
+        .ticket-label { font-size: 0.7rem; color: #888; text-transform: uppercase; display: block; margin-bottom: 5px; }
+        .ticket-value { font-size: 1.2rem; font-weight: 700; color: #333; display: block; }
+        .ticket-id { background: #f0f0f0; padding: 10px 20px; display: inline-block; border-radius: 5px; font-family: monospace; font-weight: bold; margin-top: 10px; color: var(--teal); }
+        
+        .close-btn { margin-top: 25px; background: var(--gold); color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
@@ -148,7 +139,7 @@
         <span class="title-line word-majlis">Majlis</span>
         <span class="title-line word-apc">Anugerah Perkhidmatan Cemerlang 2026</span>
         <span class="title-line word-and">&</span>
-        <span class="title-line word-raya">Selamat Hari Raya Aidilfitri</span>
+        <span class="title-line word-raya">Sambutan Hari Raya Aidilfitri</span>
     </div>
 
     <form id="attendanceForm">
@@ -170,8 +161,8 @@
     <div style="text-align: center;">
         <div class="ticket">
             <div class="ticket-header">
-                <div style="font-size: 0.7rem; letter-spacing: 1px;">PAS MASUK RASMI</div>
-                <div style="font-weight: 800;">APC & RAYA JKNS 2026</div>
+                <div style="font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 5px;">PAS MASUK RASMI</div>
+                <div style="font-weight: 800; font-size: 1.1rem;">APC & RAYA JKNS 2026</div>
             </div>
             <div class="ticket-body">
                 <div class="ticket-info">
@@ -184,9 +175,8 @@
                 </div>
                 <div class="ticket-id" id="disp-id">JKNS-0000</div>
             </div>
-            <div class="ticket-footer">Sila Screenshot Tiket Ini</div>
         </div>
-        <button class="close-btn" onclick="location.reload()">Tutup & Selesai</button>
+        <button class="close-btn" onclick="location.reload()">Selesai</button>
     </div>
 </div>
 
